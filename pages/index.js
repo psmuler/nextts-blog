@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../auth';
 import LoginButton from '../components/LoginButton';
 import LogoutButton from '../components/LogoutButton';
+import SomeOtherComponent from '../components/otherComponent'
 
 function Home() {
   const [user] = useAuthState(auth);
@@ -14,6 +15,7 @@ function Home() {
         <div>
           <p>ログイン中: {user.displayName}</p>
           <LogoutButton />
+          <SomeOtherComponent />
         </div>
       ) : (
         <LoginButton />

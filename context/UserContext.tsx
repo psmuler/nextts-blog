@@ -9,12 +9,11 @@ export function useUser() {
 }
 
 export function UserProvider({ children }) {
-    const [user, setUser] = useState(null);
+    const [uid, setUid] = useState(null);
 
     return (
-        <UserContext.Provider value={{ user, setUser }}>
+        <UserContext.Provider value={{ uid, setUid }}>
             {children}
-
         </UserContext.Provider>
     );
 }
